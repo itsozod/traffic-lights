@@ -1,0 +1,99 @@
+:root {
+  --left: 60px;
+}
+*,
+*::before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#root {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+body {
+  background-image: url(images/background-city-road.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px;
+  width: 115px;
+}
+.start,
+.stop {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  text-shadow: 2px 2px 5px white, 2px 2px 5px orange;
+}
+.start {
+  background-color: green;
+}
+.stop {
+  background-color: red;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+.traffic-light {
+  background-color: black;
+  padding: 18px;
+  border-radius: 12px;
+  border: 2px solid lightsalmon;
+  position: relative;
+}
+.red,
+.green {
+  width: 60px;
+  border-radius: 50%;
+  padding: 18px;
+  margin: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid bisque;
+  font-size: 20px;
+}
+.vertical {
+  background-color: yellow;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 35px;
+  padding: 4px;
+  position: absolute;
+}
+.road {
+  width: 400px;
+  position: absolute;
+  transform: translateY(50px);
+  z-index: 0;
+}
+.car {
+  width: 170px;
+  position: absolute;
+  transform: translateY(70px);
+  left: var(--left);
+  z-index: 1;
+  transition: 0.6s all;
+  object-fit: cover;
+}
+.img-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
